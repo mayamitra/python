@@ -6,6 +6,10 @@ app = flask.Flask(__name__)
 def hello():
 	return render_template('home.html')
 
+@app.route("/resume")
+def resume():
+	return render_template('resume.html')
+
 @app.route("/contact")
 def contact():
 	return render_template('contact.html')
@@ -13,6 +17,10 @@ def contact():
 @app.route("/about")
 def about():
 	return render_template('about.html')
+
+@app.route("/home")
+def home():
+	return render_template('home.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)
