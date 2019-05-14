@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+  {% block content %}
+
+  <h1 style = "font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-style:italic;">
+        <center>
+                <font size="+4"> CONTACT </font>
+            </center>
+      </h1>
+
+  <!-- <div class="jumbotron jumbotron-fluid"> -->
+    <div class="container">
+      <p class="lead">
+        {{ page.body|richtext }}
+    </div>
+  <!-- </div> -->
+  {% endblock %}

@@ -24,6 +24,18 @@ def about():
 def contact():
 	return render_template('contact.html')
 
+@app.route('/resume')
+def resume():
+	return render_template('resume.html')
+
+@app.route('/trial')
+def trial():
+	return render_template('trial.html')
+
+@app.route('/trial2')
+def trial2():
+	return render_template('trial2.html')
+
 @app.route("/greet/<name>")
 def greet(name):
 	return '''

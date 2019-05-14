@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block content %}
+<h1 style = "font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-style:italic;">
+        <center>
+                <font size="+4"> ABOUT </font>
+            </center>
+      </h1>
+
+      <!-- <div class="jumbotron jumbotron-fluid"> -->
+        <!-- <div class="p-3 mb-2 bg-white text-dark"> -->
+        <div class="container">
+          <p class="lead">
+            {{ page.body|richtext }}
+        </p>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="https://github.com/mayamitra/python/blob/master/mayamitra.jpg?raw=true" class="d-block w-50" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+  {% endblock %}
