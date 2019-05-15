@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+  {% block content %}
+
+  <h1 style = "font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;font-style:italic;">
+        <center>
+                <font size="+4"> WORK </font>
+            </center>
+      </h1>
+
+    <div class="container">
+      <p class="lead">
+        <center>
+        {{ page.body|richtext }}
+        </center>
+
+    </div>
+
+
+  
+  {% endblock %}

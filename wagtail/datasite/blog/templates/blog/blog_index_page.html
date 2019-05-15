@@ -12,10 +12,13 @@
                 <font size="+4"> BLOG </font>
                 <br>
                 My thoughts on everything
+                <br> <br>
             </center>
       </h1>
 
-    <div class="intro">{{ page.intro|richtext }}</div>
+    <!-- <div class="intro">{{ page.intro|richtext }}</div> -->
+
+    <center> 
 
     {% for post in blogpages %}
     {% with post=post.specific %}
@@ -27,9 +30,10 @@
         {% endwith %}
 
         <p>{{ post.intro }}</p>
-        {{ post.body|richtext }}
+        <!-- {{ post.body|richtext }} --> 
     {% endwith %}
     </div>
 {% endfor %}
+</center>
 
 {% endblock %}
