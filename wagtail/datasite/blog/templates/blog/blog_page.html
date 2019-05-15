@@ -6,7 +6,10 @@
 
 {%block content%}
 <center> 
-<h1>{{ page.title }}</h1>
+<!-- <div class="container"> -->
+<h1>
+    {{ page.title }}
+</h1>
 <p class="meta">{{ page.date }}</p>
 
 {% with categories=page.categories.all %}
@@ -23,7 +26,9 @@
     {% endif %}
 {% endwith %}
 
-    <div class="intro">{{ page.intro }}</div>
+    <div class="intro">
+        {{ page.intro }}
+    </div>
     <br> 
 
     {% for item in page.gallery_images.all %}
@@ -32,8 +37,12 @@
             <p>{{ item.caption }}</p>
         </div>
     {% endfor %}
+    </center>
+
+    <div class="container">
 
     {{ page.body|richtext }}
+</div>    
 
     
 
@@ -47,7 +56,5 @@
     {% endif %}
 
     <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
-
-</center>
 
 {% endblock %}
